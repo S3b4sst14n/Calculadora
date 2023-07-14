@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: beige;
+    display: grid;
+    place-items: center;
+}
+
+.calculadora {
+    background-color: rgb(53, 53, 41);
+    color: rgb(0, 0, 0);
+    width: 350px;
+    max-width: 100%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+
+}
+
+.results {
+    grid-column: 1/-1;
+    background-color: rgb(171, 177, 150);
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn {
+    background-color: rgb(214, 214, 200);
+    color: black;
+    padding: 1.5rem .5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#punto {
+    font-size: 1.1rem;
+}
+
+.btn:hover {
+    background-color: white;
+}
+
+#igual {
+    grid-row: span 2;
+    background-color: rgb(183, 196, 194);
+}
+
+#igual:hover {
+    background-color: rgb(205, 218, 216);
+    ;
+}
+
+#cero {
+    grid-column: span 2;
+}
+
+#delete {
+    background-color: rgb(223, 81, 81);
+}
+
+#delete:hover {
+    background-color: rgb(214, 108, 108);
+}
