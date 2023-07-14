@@ -5,13 +5,13 @@ botones.forEach(boton => {
     boton.addEventListener("click", () => {
         const botonApretado = boton.textContent;
 
-        if (boton.id === "delete") {
+        if (boton.id == "delete") {
             results.textContent = "0";
             return;
         }
 
-        if (boton.id === "borrar") {
-            if (results.textContent.length === 1 || results.textContent === "Error!") {
+        if (boton.id == "borrar") {
+            if (results.textContent.length == 1 || results.textContent == "Error!") {
                 results.textContent = "0";
             } else {
                 results.textContent = results.textContent.slice(0, -1);
@@ -19,7 +19,7 @@ botones.forEach(boton => {
             return;
         }
 
-        if (boton.id === "igual") {
+        if (boton.id == "igual") {
             try {
                 results.textContent = eval(results.textContent);
             } catch {
@@ -28,7 +28,7 @@ botones.forEach(boton => {
             return;
         }
 
-        if (results.textContent === "0" || results.textContent === "Error :(") {
+        if (results.textContent == "0" || results.textContent == "Error :(") {
             results.textContent = botonApretado;
         } else {
             results.textContent += botonApretado;
